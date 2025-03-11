@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Highlights Carousel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <section class="home" id="home">
+    <center>
+      <div class="content">
+        <h3>It's time to celebrete! the best <span>event</span></h3>
+        <a href="#" class="btn">Explore more</a>
+      </div>
+    </center>
+
+
+    <div class="swiper home-slider">
+      <div class="swiper-wrapper wrapper">
+        <div class="swiper-slide "><img src="images/slide2.jpg" alt=""></div>
+        <div class="swiper-slide "><img src="images/clg2.webp" alt=""></div>
+        <div class="swiper-slide "><img src="images/clg3.jpeg" alt=""></div>
+        <div class="swiper-slide "><img src="images/slide!.jpeg" alt=""></div>
+        <div class="swiper-slide "><img src="images/clg2.webp" alt=""></div>
+        <div class="swiper-slide "><img src="images/clg3.jpeg" alt=""></div>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- <script src="event.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".home-slider", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
+
+</body>
+
+</html>
