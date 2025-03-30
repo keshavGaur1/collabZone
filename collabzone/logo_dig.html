@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      background-color: #1a202c;
+      /* Tailwind's gray-800 */
+      border-radius: 8px;
+      margin-right: -15px;
+      z-index: 1;
+    }
+
+    .logo-icon:last-child {
+      margin-right: 0;
+      z-index: 0;
+    }
+  </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="text-center">
+    <div class="logo-container mb-4">
+      <div class="logo-icon"></div>
+      <div class="logo-icon"></div>
+    </div>
+    <h1 class="text-4xl font-bold text-gray-800">CollabZone</h1>
+    <p class="text-lg text-gray-600">YOUR CAMPUS, YOUR EVENT, OUR PASSION</p>
+  </div>
+</body>
+
+</html>

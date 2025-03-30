@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Description</title>
+    <style>
+        /* Dark Theme Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .event-container {
+            width: 80%;
+            max-width: 900px;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: 0.3s;
+            flex-wrap: wrap;
+        }
+
+        .event-container:hover {
+            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .event-poster {
+            flex: 1;
+            max-width: 40%;
+        }
+
+        .event-poster img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .event-details {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .event-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #f39c12;
+        }
+
+        .event-info {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+
+        .event-info span {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .register-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background: #f39c12;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .register-button:hover {
+            background: #e67e22;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .event-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .event-poster {
+                max-width: 100%;
+            }
+
+            .event-details {
+                padding: 15px;
+            }
+
+            .event-title {
+                font-size: 22px;
+            }
+
+            .register-button {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="event-container">
+        <div class="event-poster">
+            <img src="college-event-photoes/winter-gala.jpg" alt="Event Poster">
+        </div>
+        <div class="event-details">
+            <h2 class="event-title">TechFest 2025</h2>
+            <p class="event-info"><span>Date:</span> April 20, 2025</p>
+            <p class="event-info"><span>Time:</span> 10:00 AM - 5:00 PM</p>
+            <p class="event-info"><span>Venue:</span> Allenhouse Institute, Kanpur</p>
+            <p class="event-info"><span>Description:</span> Winter gala is a joyful celebration to welcome the new year
+                with music, dance, and festivities.</p>
+            <a href="/./event_User_Reg.html"><button class="register-button">Register Now</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Gateway</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Dark Theme */
+    body {
+      background-color: #121212;
+      /* Deep Black */
+      color: #e0e0e0;
+      /* Light Grey */
+    }
+
+    .card {
+      background-color: #1c1c1c;
+      /* Dark Grey */
+      border: 1px solid #2a2a2a;
+      /* Slightly Lighter Grey Border */
+    }
+
+    input,
+    button {
+      background-color: #252525;
+      /* Darker Grey */
+      border: 1px solid #444;
+      /* Medium Grey */
+    }
+
+    button:hover {
+      background-color: #333;
+      /* Slightly Brighter Grey */
+    }
+  </style>
+</head>
+
+<body class="flex justify-center items-center min-h-screen p-4">
+
+  <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl">
+
+    <!-- Payment Details Card (Left Side) -->
+    <div class="card p-6 rounded-lg shadow-md text-center w-full md:w-1/2">
+      <h2 class="text-xl font-semibold mb-4">Scan & Pay</h2>
+
+      <!-- QR Code or Payment Image -->
+      <img id="paymentImage" src="" alt="Payment QR Code" class="w-full rounded-lg mb-4 border border-gray-700">
+
+      <!-- UPI ID -->
+      <p class="text-gray-400">Pay to:</p>
+      <p id="upiId" class="text-lg font-bold mb-4 text-gray-300"></p>
+
+      <!-- Important Note -->
+      <p class="text-sm text-yellow-400 bg-gray-800 p-2 rounded-md">
+        ⚠️ Take a screenshot of the payment and note your UTR for the next step.
+      </p>
+    </div>
+
+    <!-- Payment Confirmation Form (Right Side) -->
+    <div class="card p-6 rounded-lg shadow-md w-full md:w-1/2">
+      <h2 class="text-xl font-semibold mb-4">Payment Confirmation</h2>
+
+      <!-- Upload Screenshot -->
+      <label class="block text-gray-400 text-sm font-medium mb-2" for="paymentScreenshot">Upload Screenshot</label>
+      <input type="file" id="paymentScreenshot" accept="image/*"
+        class="w-full p-2 rounded-md text-white mb-4 focus:ring-2 focus:ring-blue-500">
+
+      <!-- UTR Input -->
+      <label class="block text-gray-400 text-sm font-medium mb-2" for="utrNumber">Enter UTR Number</label>
+      <input type="text" id="utrNumber" placeholder="Enter UTR Number"
+        class="w-full p-2 rounded-md text-white mb-4 focus:ring-2 focus:ring-blue-500">
+
+      <!-- Next Button -->
+      <a href="success.html"><button
+          class="w-full py-2 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Next
+        </button></a>
+    </div>
+
+  </div>
+
+  <script>
+    // Retrieve stored values
+    let storedImage = localStorage.getItem("qrImage");
+    let storedUpiId = localStorage.getItem("upiId");
+
+    // Set Image
+    if (storedImage) {
+      document.getElementById("paymentImage").src = storedImage;
+    } else {
+      document.getElementById("paymentImage").alt = "No image found!";
+    }
+
+    // Set UPI ID
+    document.getElementById("upiId").innerText = storedUpiId ? storedUpiId : "No UPI ID found!";
+  </script>
+
+</body>
+
+</html>

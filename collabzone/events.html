@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Highlights Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"><span>Collab</span>Zone</a>
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="collegePartner.html">College Partner</a>
+        <a href="events.html">Events</a>
+        <a href="#gallery">About</a>
+        <a href="login.html">login</a>
+      </nav>
+
+      <div id="menu-bars" class="fas fa-bars"></div>
+    </header>
+
+    <!-- Sidebar Wrapper -->
+    <div id="sidebar-wrapper">
+      <button
+        id="menuButton"
+        onclick="toggleSidebar()"
+        style="
+          position: fixed;
+          left: 20px;
+          top: 20px;
+          font-size: 30px;
+          cursor: pointer;
+          background: none;
+          border: none;
+          color: white;
+          z-index: 1100;
+          transition: 0.3s;
+          margin-top: 7rem;
+        "
+      >
+        ☰
+      </button>
+      <div
+        id="sidebar"
+        style="
+          width: 250px;
+          height: 100vh;
+          background: rgba(51, 51, 51, 0.95);
+          position: fixed;
+          left: -250px;
+          top: 0;
+          transition: left 0.4s ease-in-out;
+          padding-top: 100px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        "
+      >
+        <button
+          id="closeButton"
+          onclick="toggleSidebar()"
+          style="
+            font-size: 30px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin-top: 5rem;
+          "
+        >
+          &times;
+        </button>
+        <a
+          href="#"
+          style="
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 18px;
+          "
+          >Previous Events</a
+        >
+        <a
+          href="#"
+          style="
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 18px;
+          "
+          >Upcoming Events</a
+        >
+        <a
+          href="#"
+          style="
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 18px;
+          "
+          >Social Feeds</a
+        >
+        <a
+          href="#"
+          style="
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 18px;
+          "
+          >Help</a
+        >
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          var menuButton = document.getElementById("menuButton");
+          var closeButton = document.getElementById("closeButton");
+
+          if (sidebar.style.left === "-250px") {
+            // Open the sidebar
+            sidebar.style.left = "0";
+            menuButton.style.display = "none";
+          } else {
+            // Close the sidebar
+            sidebar.style.left = "-250px";
+            menuButton.style.display = "block";
+          }
+        }
+
+        // Attach the function to the buttons
+        var menuButton = document.getElementById("menuButton");
+        var closeButton = document.getElementById("closeButton");
+
+        if (menuButton) {
+          menuButton.onclick = toggleSidebar;
+        }
+
+        if (closeButton) {
+          closeButton.onclick = toggleSidebar;
+        }
+      });
+    </script>
+
+    <!-- <script>
+    fetch("side_bar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("side_bar-container").innerHTML = data);
+  </script> -->
+
+    <section class="home" id="home1">
+      <center>
+        <div class="content">
+          <h3>It's time to celebrete! the best <span>event</span></h3>
+          <a href="#" class="btn">Explore more</a>
+        </div>
+      </center>
+
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper wrapper">
+          <div class="swiper-slide">
+            <img src="college-event-photoes/exubarance-18.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="college-event-photoes/reeth-18.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="college-event-photoes/oorja-23.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="college-event-photoes/ted-x.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="college-event-photoes/cortegra-19.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="college-event-photoes/inno-quiz.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- various Event Type -->
+    <section class="home" id="home2">
+      <!--
+    <center>
+      <div class="content">
+        <h3>Various types of <span>event</span></h3>
+      </div>
+    </center>-->
+      <center>
+        <div class="content">
+          <h3>Upcoming <span>events</span></h3>
+        </div>
+      </center>
+    </section>
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 100px;
+        gap: 100px;
+      "
+    >
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/ideat.jpg"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>Idea Present</h5>
+          <p>
+            Idea Present Event is a platform for showcasing innovative concepts,
+            creative solutions, and entrepreneurial visions.
+          </p>
+          <a
+            href="event-details/ideat.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/allentalk.png"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>Speaking Event</h5>
+          <p>
+            Speaking Event is a platform for individuals to express ideas,
+            inspire audiences, and enhance public speaking skills.
+          </p>
+          <a
+            href="event-details/allentalk.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/anveshan.png"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>Quiz Competition</h5>
+          <p>
+            Quiz Competition is an engaging contest that tests knowledge, quick
+            thinking, and teamwork across various topics.
+          </p>
+          <a
+            href="event-details/anveshan.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/winter-gala.jpg"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>New Year Party</h5>
+          <p>
+            New Year Party is a joyful celebration to welcome the new year with
+            music, dance, and festivities..
+          </p>
+          <a
+            href="event-details/winter-gala.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/ted-x.jpg"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>Speaker's Talk</h5>
+          <p>
+            Speaker's Talk is an insightful session where experts share
+            knowledge, experiences, and inspiration on various topics.
+          </p>
+          <a
+            href="event-details/tedx.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/reeth-18.jpg"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>Fresher's Party</h5>
+          <p>
+            Fresher's Party is a fun-filled welcome event to celebrate and
+            introduce new students to college life.
+          </p>
+          <a
+            href="event-details/reeth.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+    <center>
+      <div class="content" style="margin-top: 50px">
+        <a href="#" class="btn">Explore more</a>
+      </div>
+    </center>
+
+    <!-- Upcoming Events -->
+
+    <section class="home" id="home3">
+      <center>
+        <div class="content">
+          <h3>Previous <span>events</span></h3>
+        </div>
+      </center>
+    </section>
+
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 100px;
+        gap: 100px;
+      "
+    >
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/cortegra-19.png"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>The Mechanical Society</h5>
+          <p>
+            The Mechanical Society fosters innovation, collaboration, and
+            technical excellence among mechanical engineering enthusiasts.
+          </p>
+          <a
+            href="event-details/cortega.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/reeth-18.jpg"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>Fresher's Party</h5>
+          <p>
+            Fresher's Party is a fun-filled welcome event to celebrate and
+            introduce new students to college life.
+          </p>
+          <a
+            href="event-details/reeth.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 30rem;
+          background: rgba(68, 68, 68, 0.9);
+          color: aliceblue;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease-in-out;
+        "
+      >
+        <img
+          src="college-event-photoes/oorja-23.jpg"
+          alt="..."
+          style="
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: 0.3s;
+          "
+        />
+        <div style="padding: 15px; text-align: center">
+          <h5>The sport event</h5>
+          <p>
+            The sports event promotes teamwork, fitness, and competitive spirit
+            through various athletic activities and games.
+          </p>
+          <a
+            href="event-details/oorja.html"
+            style="
+              background: #ff4d4d;
+              border: none;
+              padding: 10px 15px;
+              font-size: 16px;
+              border-radius: 8px;
+              cursor: pointer;
+              transition: 0.3s;
+              display: inline-block;
+              text-decoration: none;
+              color: white;
+            "
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- theme-toggler -->
+
+    <!-- Theme Toggler -->
+    <div class="theme-toggler">
+      <div class="toggle-btn">
+        <i class="fas fa-cog"></i>
+      </div>
+
+      <h3>Choose Color</h3>
+
+      <div class="buttons">
+        <div
+          class="theme-btn"
+          style="background-color: #3867d6"
+          data-color="#3867d6"
+        ></div>
+        <div
+          class="theme-btn"
+          style="background-color: #f7b731"
+          data-color="#f7b731"
+        ></div>
+        <div
+          class="theme-btn"
+          style="background-color: #ff0033"
+          data-color="#ff0033"
+        ></div>
+        <div
+          class="theme-btn"
+          style="background-color: #20bf6b"
+          data-color="#20bf6b"
+        ></div>
+        <div
+          class="theme-btn"
+          style="background-color: #fa8231"
+          data-color="#fa8231"
+        ></div>
+        <div
+          class="theme-btn"
+          style="background-color: #fc427b"
+          data-color="#FC427B"
+        ></div>
+      </div>
+    </div>
+
+    <center>
+      <div class="content" style="margin-top: 50px">
+        <a href=" #" class="btn">Explore more</a>
+      </div>
+    </center>
+
+    <script src="event.js"></script>
+    <script src="script.js"></script>
+
+    <!-- <script src="event.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".home-slider", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

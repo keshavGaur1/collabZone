@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Toggler</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    .theme-toggler {
+      position: fixed;
+      top: 10rem;
+      right: -20rem;
+      background: #333;
+      z-index: 1000;
+      width: 20rem;
+      text-align: center;
+      transition: right 0.3s ease;
+    }
+
+    .theme-toggler h3 {
+      color: #fff;
+      padding: 1rem 0;
+      font-size: 2rem;
+    }
+
+    .theme-toggler.active {
+      right: 0;
+    }
+
+    .theme-toggler .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .theme-toggler .buttons .theme-btn {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .theme-toggler .toggle-btn {
+      position: absolute;
+      top: 0;
+      left: -5.9rem;
+      padding: 1.3rem 1.5rem;
+      background: #333;
+      cursor: pointer;
+    }
+
+    .theme-toggler .toggle-btn i {
+      color: #fff;
+      font-size: 3rem;
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="theme-toggler">
+    <div class="toggle-btn">
+      <i class="fas fa-cog"></i>
+    </div>
+
+    <h3>Choose Color</h3>
+
+    <div class="buttons">
+      <div class="theme-btn" style="background-color: #3867d6;" data-color="#3867d6"></div>
+      <div class="theme-btn" style="background-color: #f7b731;" data-color="#f7b731"></div>
+      <div class="theme-btn" style="background-color: #ff0033;" data-color="#ff0033"></div>
+      <div class="theme-btn" style="background-color: #20bf6b;" data-color="#20bf6b"></div>
+      <div class="theme-btn" style="background-color: #fa8231;" data-color="#fa8231"></div>
+      <div class="theme-btn" style="background-color: #FC427B;" data-color="#FC427B"></div>
+    </div>
+  </div>
+
+  <script>
+    let themeToggler = document.querySelector('.theme-toggler');
+    let toggleBtn = document.querySelector('.toggle-btn');
+
+    toggleBtn.onclick = () => {
+      themeToggler.classList.toggle('active');
+    };
+
+    window.onscroll = () => {
+      themeToggler.classList.remove('active');
+    };
+
+    document.querySelectorAll('.theme-toggler .theme-btn').forEach(btn => {
+      btn.onclick = () => {
+        let color = btn.getAttribute('data-color');  // Get color from data attribute
+        document.documentElement.style.setProperty('--main-color', color);
+      };
+    });
+  </script>
+
+</body>
+
+</html>

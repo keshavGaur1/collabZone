@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollabZone</title>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/70d41d62a4.js" crossorigin="anonymous"></script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- External CSS File -->
+  <link rel="stylesheet" href="about.css" />
+
+  <style>
+    /* Flexbox for aligning team members in a single row */
+    .grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <div id="header-container"></div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <div class="container">
+      <h1 class="subTitle">Contact Us</h1>
+      <div class="row">
+        <div class="contactLeft">
+          <p><i class="fas fa-paper-plane"></i> keshavgaur28@gmail.com</p>
+          <p><i class="fas fa-phone-square-alt"></i> 9120518394</p>
+
+          <!-- Social Media Icons -->
+          <div class="socialIcons">
+            <a href="#"> <i class="fab fa-facebook"></i> </a>
+            <a href="#"> <i class="fab fa-twitter-square"></i> </a>
+            <a href="#"> <i class="fab fa-instagram"></i> </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contactRight">
+          <form action="">
+            <input type="text" name="Name" placeholder="Enter your name" required />
+            <input type="email" name="Email" placeholder="Enter your email" required />
+            <textarea name="Message" rows="5" placeholder="Enter your Message"></textarea>
+            <button type="submit" class="btn submitBtn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="home">
+    <div class="home-content">
+      <h1>About Us</h1>
+      <h3>We are CollabZone and we provide -</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <!-- Team Members Section -->
+      <div class="grid">
+
+        <!-- Team Member 1 -->
+        <div class="bg-white shadow-lg rounded-2xl p-6 text-center w-64">
+          <img src="images/keshavDP.jpeg" alt="John Doe"
+            class="w-24 h-24 mx-auto rounded-full border-4 border-gray-200" />
+          <h3 class="mt-4 text-xl font-semibold">John Doe</h3>
+          <p class="text-gray-500">Frontend Developer</p>
+          <div class="mt-4 flex justify-center space-x-4">
+            <a href="mailto:john@example.com" class="text-gray-600 hover:text-blue-500">📧</a>
+            <a href="https://linkedin.com/in/johndoe" target="_blank" class="text-gray-600 hover:text-blue-700">🔗</a>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="bg-white shadow-lg rounded-2xl p-6 text-center w-64">
+          <img src="images/keshavDP.jpeg" alt="Jane Smith"
+            class="w-24 h-24 mx-auto rounded-full border-4 border-gray-200" />
+          <h3 class="mt-4 text-xl font-semibold">Jane Smith</h3>
+          <p class="text-gray-500">Backend Developer</p>
+          <div class="mt-4 flex justify-center space-x-4">
+            <a href="mailto:jane@example.com" class="text-gray-600 hover:text-blue-500">📧</a>
+            <a href="https://linkedin.com/in/janesmith" target="_blank" class="text-gray-600 hover:text-blue-700">🔗</a>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="bg-white shadow-lg rounded-2xl p-6 text-center w-64">
+          <img src="images/keshavDP.jpeg" alt="Alice Johnson"
+            class="w-24 h-24 mx-auto rounded-full border-4 border-gray-200" />
+          <h3 class="mt-4 text-xl font-semibold">Alice Johnson</h3>
+          <p class="text-gray-500">UI/UX Designer</p>
+          <div class="mt-4 flex justify-center space-x-4">
+            <a href="mailto:alice@example.com" class="text-gray-600 hover:text-blue-500">📧</a>
+            <a href="https://linkedin.com/in/alicejohnson" target="_blank"
+              class="text-gray-600 hover:text-blue-700">🔗</a>
+          </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="bg-white shadow-lg rounded-2xl p-6 text-center w-64">
+          <img src="images/keshavDP.jpeg" alt="Robert Brown"
+            class="w-24 h-24 mx-auto rounded-full border-4 border-gray-200" />
+          <h3 class="mt-4 text-xl font-semibold">Robert Brown</h3>
+          <p class="text-gray-500">DevOps Engineer</p>
+          <div class="mt-4 flex justify-center space-x-4">
+            <a href="mailto:robert@example.com" class="text-gray-600 hover:text-blue-500">📧</a>
+            <a href="https://linkedin.com/in/robertbrown" target="_blank"
+              class="text-gray-600 hover:text-blue-700">🔗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

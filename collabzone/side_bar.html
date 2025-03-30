@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="collegePartner.css"> -->
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <button
+      onclick="toggleSidebar()"
+      style="
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
+        z-index: 1100;
+        transition: 0.3s;
+        margin-top: 7rem;
+      "
+    >
+      ☰
+    </button>
+    <div
+      id="sidebar"
+      style="
+        width: 250px;
+        height: 100vh;
+        background: rgba(51, 51, 51, 0.95);
+        position: fixed;
+        left: -250px;
+        top: 0;
+        transition: left 0.4s ease-in-out;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+      "
+    >
+      <button
+        onclick="toggleSidebar()"
+        style="
+          font-size: 30px;
+          background: none;
+          border: none;
+          color: white;
+          cursor: pointer;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          margin-top: 5rem;
+        "
+      >
+        &times;
+      </button>
+      <a
+        href="#"
+        style="
+          display: block;
+          color: white;
+          padding: 15px;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 18px;
+        "
+        >Previous Events</a
+      >
+      <a
+        href="#"
+        style="
+          display: block;
+          color: white;
+          padding: 15px;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 18px;
+        "
+        >Upcoming Events</a
+      >
+      <a
+        href="#"
+        style="
+          display: block;
+          color: white;
+          padding: 15px;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 18px;
+        "
+        >Social Feeds</a
+      >
+      <a
+        href="#"
+        style="
+          display: block;
+          color: white;
+          padding: 15px;
+          text-decoration: none;
+          transition: 0.3s;
+          font-size: 18px;
+        "
+        >Help</a
+      >
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar.style.left === "-250px") {
+          sidebar.style.left = "0";
+        } else {
+          sidebar.style.left = "-250px";
+        }
+      }
+    </script>
+    <script src="side_bar.js"></script>
+  </body>
+</html>
