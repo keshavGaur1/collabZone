@@ -21,7 +21,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(urlencoded({ extended: true }));
 
-const allowedOrigins = ["http://localhost:8000", "http://localhost:5173" ,  "http://localhost:5173" ]; // Add allowed origins
+const allowedOrigins = ["http://localhost:8000", "http://localhost:5173" ,  "http://localhost:5173" ,  "http://127.0.0.1:5500"  ]; // 127.0.0.1:5500 for live server
+// Add allowed origins
 const corsOptions = {
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) {

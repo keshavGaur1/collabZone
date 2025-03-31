@@ -26,15 +26,20 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
+          <form action="" id="loginForm" class="sign-in-form">
             <h2 class="title">Sign In</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email"
+                required
+              />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="loginPassword"  placeholder="Password" required />
             </div>
             <input type="submit" value="Login" class="btn solid" />
 
@@ -43,21 +48,22 @@
             <h3>Login as <a href="adminLogin.html">Admin</a></h3>
           </form>
 
-          <form action="" class="sign-up-form">
-            <h2 class="title">login</h2>
+          <form action="" id="signupForm" class="sign-up-form">
+            <h2 class="title">sign up </h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" id="signupUsername" placeholder="Username" required />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" id="signupEmail" placeholder="Email" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" id="signupPassword" placeholder="Password" required />
             </div>
-            <input type="submit" value="login" class="btn solid" />
+            <input type="submit" value="sign up " class="btn solid" />
+            <p id="signupError" class="error-message"></p>
           </form>
         </div>
       </div>
@@ -89,5 +95,6 @@
     </div>
 
     <script src="./login.js"></script>
+    <script src="auth.js"></script> 
   </body>
 </html>
